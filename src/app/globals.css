@@ -35,3 +35,22 @@ body::before {
   z-index: 1000;
 }
 */
+
+/* Loading Screen Overlay (Scanline Effect) */
+.loading-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1; /* Ensure it's above background but below content */
+}
