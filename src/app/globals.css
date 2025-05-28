@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans; /* text color will be set below */
+  /* font-sans is Arial from tailwind.config.js */
+  
+  /* Cyberpunk Space Background - Three.js will now handle this */
+  background-color: #0A0F1A; /* space-bg, fallback if Three.js doesn't load */
+  color: #E0E0E0; /* Default light text color */
+  /* background-image and background-attachment removed */
+}
+
+/* Link style for dark background */
+a {
+  @apply text-vivid-cyan underline hover:text-vivid-lime;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold; /* Default browser bold for Arial/Times should be fine */
+}
+
+/* Optional: Add a simple border around the body for a "windowed" feel */
+/*
+body::before {
+  content: '';
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 2px outset #C0C0C0; 
+  pointer-events: none;
+  z-index: 1000;
+}
+*/
