@@ -5,6 +5,7 @@ import "./globals.css";
 import LoadingScreen from '@/components/LoadingScreen'; // Import the loading screen
 import ThreeBackground from '@/components/ThreeBackground'; // Import the Three.js background
 import { myNameFont, contentFont } from './fonts'; // Import custom fonts
+import { Analytics } from "@vercel/analytics/next"; // Import Vercel Analytics component
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -43,6 +44,8 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <ThreeBackground />
         {isLoading ? <LoadingScreen /> : children}
+        {/* Vercel Analytics component for performance monitoring */}
+        <Analytics />
       </body>
     </html>
   );
